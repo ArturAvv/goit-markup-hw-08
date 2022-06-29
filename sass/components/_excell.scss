@@ -1,0 +1,42 @@
+.excell__item--box {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+}
+
+.excell__svg {
+  width: 70px;
+  height: 70px;
+}
+
+.excell__list {
+  display: flex;
+}
+
+.excell__item {
+  max-width: 270px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+
+.excell__title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  color: $main-text-color;
+}
+
+.excell__text {
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $secondary-text-color;
+}

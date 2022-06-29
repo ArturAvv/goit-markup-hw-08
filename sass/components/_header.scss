@@ -1,0 +1,97 @@
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header .container {
+  display: flex;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav__list {
+  display: flex;
+}
+
+.header-nav .header-nav__item + .header-nav__item {
+  margin-left: 50px;
+}
+
+.header-nav .link {
+  display: block;
+  padding: 32px 0;
+}
+
+.header-contacts__list {
+  display: flex;
+  margin-left: auto;
+}
+
+.tel {
+  margin-left: 30px;
+}
+
+.header-nav__link {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: $main-text-color;
+  display: flex;
+  padding: 32px 0;
+  position: relative;
+  transition: color 250ms $timing-function;
+}
+
+.header-nav__link.current:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: $accent-color;
+  border-radius: 2px;
+  left: 0;
+  bottom: 0;
+  margin-bottom: -1px;
+}
+
+.current {
+  color: $accent-color;
+}
+
+.header-logo {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: $black-color;
+  margin-right: 93px;
+}
+
+.header-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.tel:hover .smartphone,
+.tel:focus .smartphone {
+  fill: $accent-color;
+}
+
+.mail:hover .envelope,
+.mail:focus .envelope {
+  fill: $accent-color;
+}
+
+.logo-web {
+  color: $accent-color;
+}
+
+.mail,
+.tel {
+  color: $secondary-text-color;
+}
