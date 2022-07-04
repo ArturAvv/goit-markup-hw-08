@@ -351,6 +351,11 @@ address {
   text-align: center;
   color: #212121;
 }
+@media screen and (min-width: 768px) {
+  .excell__title {
+    text-align: left;
+  }
+}
 
 .excell__text {
   line-height: 1.71;
@@ -826,13 +831,16 @@ address {
   background-color: #188ce8;
 }
 
-.filters-btns {
+.filter-btns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: -15px;
 }
 
 .portf-btn {
@@ -850,6 +858,7 @@ address {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 15px;
 }
 .portf-btn:hover, .portf-btn:focus {
   color: #ffffff;
@@ -881,14 +890,18 @@ address {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 50px;
-  margin-left: -30px;
-  margin-bottom: -30px;
+  gap: 30px;
 }
 
-.projects__item {
-  width: calc(33.3333333333% - 30px);
-  margin-left: 30px;
-  margin-bottom: 30px;
+@media screen and (min-width: 768px) {
+  .projects__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects__item {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .projects-img-cont {
@@ -934,6 +947,12 @@ address {
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .projects-1item {
+    height: 146px;
+  }
 }
 
 .project-link {

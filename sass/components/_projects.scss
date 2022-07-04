@@ -1,6 +1,8 @@
-.filters-btns {
+.filter-btns {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  margin-top: -15px;
 }
 
 .portf-btn {
@@ -24,6 +26,7 @@
       0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
   }
+  margin-top: 15px;
 }
 
 .projects-title {
@@ -45,14 +48,16 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;
-  margin-left: -30px;
-  margin-bottom: -30px;
+  gap: 30px;
 }
 
 .projects__item {
-  width: calc(100% / 3 - 30px);
-  margin-left: 30px;
-  margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .projects-img-cont {
@@ -88,6 +93,12 @@
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
+}
+
+.projects-1item {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    height: 146px;
+  }
 }
 
 .project-link {
