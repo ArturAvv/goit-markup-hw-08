@@ -108,7 +108,7 @@ address {
   background-color: transparent;
   border: none;
   fill: #000000;
-  z-index: 10;
+  z-index: 2;
 }
 .menu_btn:hover, .menu_btn:focus {
   fill: #2196f3;
@@ -1150,20 +1150,48 @@ address {
 }
 
 .modal {
-  width: 528px;
-  min-height: 581px;
+  z-index: 2;
+  min-width: 290px;
+  height: auto;
   background-color: rgb(255, 255, 255);
   border-radius: 4px;
   padding: 40px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%) rotate(360deg) scale(1);
-          transform: translate(-50%, -50%) rotate(360deg) scale(1);
-  -webkit-transition: -webkit-transform 500ms;
-  transition: -webkit-transform 500ms;
-  transition: transform 500ms;
-  transition: transform 500ms, -webkit-transform 500ms;
+  position: fixed;
+  margin: 93px 15px;
+  overflow-y: auto;
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    min-width: 450px;
+    min-height: 609px;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(360deg) scale(1);
+            transform: translate(-50%, -50%) rotate(360deg) scale(1);
+    -webkit-transition: -webkit-transform 500ms;
+    transition: -webkit-transform 500ms;
+    transition: transform 500ms;
+    transition: transform 500ms, -webkit-transform 500ms;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-height: 581px;
+    width: 528px;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(360deg) scale(1);
+            transform: translate(-50%, -50%) rotate(360deg) scale(1);
+    -webkit-transition: -webkit-transform 500ms;
+    transition: -webkit-transform 500ms;
+    transition: transform 500ms;
+    transition: transform 500ms, -webkit-transform 500ms;
+  }
+}
+@media screen and (max-width: 365px) {
+  .modal {
+    margin: 55px 3px;
+  }
 }
 
 .backdrop.is-hidden .modal {
@@ -1284,6 +1312,9 @@ address {
 }
 
 .modal-comment {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
   width: 100%;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -1299,13 +1330,15 @@ address {
 }
 
 .check-text {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: #757575;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1322,15 +1355,33 @@ address {
   border-radius: 3px;
   margin-right: 5px;
 }
+@media screen and (max-width: 365px) {
+  .check-text {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .check-text {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
 
 .modal-terms {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: #2196f3;
   padding-left: 1ex;
+}
+@media screen and (min-width: 1200px) {
+  .modal-terms {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .modal-check:checked + .check-text::before {
