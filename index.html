@@ -55,11 +55,43 @@
             >
           </li>
         </ul>
-        <button type="button" class="menu-open-btn">
-          <svg class="menu-btn-icon" width="24" height="16">
-            <use href="./images/symbol-defs.svg#icon-menu"></use>
+        <button type="button" class="menu-open-btn is-open" data-menu-button aria-expanded="false">
+          <svg
+            class="menu-btn-icon"
+            width="40"
+            height="40"
+            aria-expanded="false"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use class="icon_menu" href="./images/symbol-defs.svg#icon-menu"></use>
+            <use class="icon_cross" href="./images/symbol-defs.svg#icon-close-icon"></use>
           </svg>
         </button>
+      </div>
+      <div class="mob-menu" data-menu>
+        <ul class="list mob-nav__list">
+          <li class="mob-nav__item">
+            <a href="./index.html" class="link mob-nav__link current">Студия</a>
+          </li>
+          <li class="mob-nav__item">
+            <a href="./portfolio.html" class="link mob-nav__link">Портфолио</a>
+          </li>
+          <li class="mob-nav__item"><a href="" class="link mob-nav__link">Контакты</a></li>
+        </ul>
+        <ul class="list mob-contacts__list">
+          <li class="mob-nav__item">
+            <a href="tel:+380961111111" class="mob-nav__tel link">+38 096 111 11 11</a>
+          </li>
+          <li class="mob-nav__item">
+            <a href="mailto:info@devstudio.com" class="mob-nav__email link"> info@devstudio.com</a>
+          </li>
+        </ul>
+        <ul class="mob-soc-list list">
+          <li class="mob-soc-item"><a href="" class="link mob-soc-link">Instagram</a></li>
+          <li class="mob-soc-item"><a href="" class="link mob-soc-link">Twitter</a></li>
+          <li class="mob-soc-item"><a href="" class="link mob-soc-link">Facebook</a></li>
+          <li class="mob-soc-item"><a href="" class="link mob-soc-link no-border">LinkedIn</a></li>
+        </ul>
       </div>
     </header>
 
