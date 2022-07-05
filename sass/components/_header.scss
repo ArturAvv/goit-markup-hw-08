@@ -1,6 +1,17 @@
 .header {
   border-bottom: 1px solid #ececec;
-  @media screen and(max-width:767px) {
+}
+
+.menu-open-btn {
+  background-color: transparent;
+  border: none;
+  fill: #000000;
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+  @media screen and(min-width:768px) {
+    display: none;
   }
 }
 
