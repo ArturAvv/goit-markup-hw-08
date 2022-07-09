@@ -83,12 +83,12 @@
 
 .mob-nav__item {
   &:not(:last-child) {
-    margin-bottom: 32px;
+  margin-bottom: 32px;
   }
 }
 
 .mob-contacts__list {
-  margin-top: 306px;
+  margin-top: auto;
 }
 
 .mob-nav__tel {

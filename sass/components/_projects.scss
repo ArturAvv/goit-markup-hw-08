@@ -3,6 +3,9 @@
   justify-content: center;
   flex-wrap: wrap;
   margin-top: -15px;
+  @media screen and (max-width: 767px) {
+    justify-content: start;
+  }
 }
 
 .portf-btn {
@@ -52,6 +55,9 @@
 }
 
 .projects__item {
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
   @media screen and (min-width: 768px) {
     width: calc((100% - 30px) / 2);
   }
@@ -89,20 +95,17 @@
 }
 
 .projects-item-text {
+  flex-grow: 1;
   padding: 20px 24px;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
 }
 
-.projects-1item {
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    height: 146px;
-  }
-}
-
 .project-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition: box-shadow 250ms $timing-function;
   &:focus,
   &:hover {
