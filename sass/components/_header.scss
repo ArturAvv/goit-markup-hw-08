@@ -7,6 +7,9 @@
   top: 10px;
   right: 15px;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: transparent;
   border: none;
   fill: #000000;
@@ -48,26 +51,26 @@
   }
 }
 
-.menu-close-btn {
-  width: 40px;
-  height: 40px;
-  border: none;
-  background-color: transparent;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-top: 10px;
-  margin-right: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: box-shadow 250ms $timing-function;
-  padding-top: 3px;
-  &:hover,
-  &:focus {
-    fill: $accent-color;
-  }
-}
+// .menu-close-btn {
+//   width: 40px;
+//   height: 40px;
+//   border: none;
+//   background-color: transparent;
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   margin-top: 10px;
+//   margin-right: 15px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   transition: box-shadow 250ms $timing-function;
+//   padding-top: 3px;
+//   &:hover,
+//   &:focus {
+//     fill: $accent-color;
+//   }
+// }
 
 .mob-nav__link {
   font-weight: 500;
